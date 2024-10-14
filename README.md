@@ -1,16 +1,5 @@
 # 👨‍💼 Employee Management System JUnite
 
-## Overview
-This **Employee Management System** aims to enhance HR processes for a growing company with over 200 employees. By moving from an inefficient Excel-based system to a centralized Java EE application, we aim to streamline various HR functions.
-
-## 🚀 Features
-- **Employee Management**: Easily manage employee records.
-- **Recruitment**: Publish job offers and track applications.
-- **Leave Management**: Submit and track leave requests.
-- **Family Allowance Calculation**: Automatically calculate allowances.
-- **Reporting**: Generate key reports for management.
-- **Notifications**: Receive alerts for important updates.
-
 ## 🧪 Unit Tests
 The project includes unit tests for core functionalities to ensure the system works as expected. These tests cover both success and error scenarios, with an emphasis on isolating components using **JUnit** and **Mockito**.
 
