@@ -24,15 +24,6 @@ Tests ensure proper functioning in both nominal (success) and edge cases (errors
 - **Maven** for managing test dependencies and automating test execution.
 
 
-## 🛠️ Technologies Used
-- **Java EE** (JSP, Servlets)
-- **JPA** ORM for database interactions
-- **PostgreSQL** for data storage
-- **Tomcat 10** as the web server
-- **Maven** for dependency management
-- **MVC Architecture** for modular code organization
-- **Repository** and **Service** layers
-
 
 ## 📜 License
 This project is licensed under the MIT License.
