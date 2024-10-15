@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -122,3 +123,17 @@
     }
 </style>
 </html>
+=======
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSP - Hello World</title>
+</head>
+<body>
+<h1><%= "Hello World!" %></h1>
+<br/>
+<a href="hello-servlet">Hello Servlet</a>
+</body>
+</html>
+>>>>>>> 9841ca2a1b443322e8e2b2c76da286a40ab19aac

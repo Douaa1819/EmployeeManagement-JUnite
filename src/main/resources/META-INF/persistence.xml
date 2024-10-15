@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
     <persistence-unit name="employeesmanagment">
 
@@ -18,4 +19,14 @@
             <property name="hibernate.show_sql" value="true"/>
         </properties>
     </persistence-unit>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+             version="3.2">
+  <persistence-unit name="default">
+
+  </persistence-unit>
+>>>>>>> 9841ca2a1b443322e8e2b2c76da286a40ab19aac
 </persistence>
