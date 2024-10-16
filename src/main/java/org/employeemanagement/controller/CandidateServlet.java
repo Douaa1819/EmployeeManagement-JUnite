@@ -29,25 +29,38 @@ public class CandidateServlet extends HttpServlet {
         applicationJobOfferService = new ApplicationJobOfferServiceImpl();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
 
-            List<Application> applications = applicationService.findAll();
-            request.setAttribute("applications", applications);
-            List<ApplicationJobOffer> filteredApplications = applicationJobOfferService.findByStatus(status);
-            request.setAttribute("applications", filteredApplications);
+     @Override
+        public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+         try {
 
-            List<String> skills = applicationService.findAllSkills();
-            request.setAttribute("skills", skills);
-        } catch (Exception e) {
-            e.printStackTrace();
-            request.setAttribute("flashMessage", "Erreur lors de la récupération des candidatures.");
-        }
+             List<Application> applications = applicationService.findAll();
+             request.setAttribute("applications", applications);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("view/candidate.jsp");
-        dispatcher.forward(request, response);
-    }
 
+             String statusParam = request.getParameter("status");
+             Boolean status = (statusParam != null && !statusParam.isEmpty()) ? Boolean.parseBoolean(statusParam) : null;
+
+
+             List<ApplicationJobOffer> filteredApplications = (status != null) ?
+                     applicationJobOfferService.findByStatus(status) :
+                     applicationJobOfferService.findAll();
+             request.setAttribute("filteredApplications", filteredApplications);
+
+
+             List<String> skills = applicationService.findAllSkills();
+             request.setAttribute("skills", skills);
+
+         } catch (Exception e) {
+             e.printStackTrace();
+             request.setAttribute("flashMessage", "Erreur lors de la récupération des candidatures.");
+         }
+
+
+         RequestDispatcher dispatcher = request.getRequestDispatcher("view/candidate.jsp");
+         dispatcher.forward(request, response);
+
+     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

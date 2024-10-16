@@ -159,9 +159,10 @@
         <label for="skillsFilter">Filtrer par compétences:</label>
         <select id="skillsFilter" class="filter-select" name="skills">
             <option value="">Sélectionnez une compétence</option>
-            <c:forEach var="jobOffer" items="${application.skills}">
-                <option value="${skills}">${skills}</option>
+            <c:forEach var="skill" items="${skills}">
+                <option value="${skill}">${skill}</option>
             </c:forEach>
+
         </select>
     </div>
     <button type="submit" class="filter-button">Filtrer</button>
@@ -183,21 +184,12 @@
         <tr>
             <td>${application.name}</td>
             <td>${application.email}</td>
-            <td>
-                <c:forEach var="jobOffer" items="${application.jobOffers}">
-                    <div>
-                            ${jobOffer.jobOffer.title} - ${jobOffer.isStatus() ? 'Actif' : 'Inactif'}
-                    </div>
-                </c:forEach>
-            </td>
-            <td>
+                       <td>
                 <c:forEach var="jobOffer" items="${application.jobOffers}">
                     <form action="candidate" method="post" style="display:inline;">
-                        <input type="hidden" name="jobOfferId" value="${jobOffer.id}"> <!-- Assuming jobOffer has an id -->
+                        <input type="hidden" name="jobOfferId" value="${jobOffer.id}">
                         <input type="hidden" name="applicationId" value="${application.id}">
-                        <button type="submit" class="accept-button" name="action" value="accept">
-                            <span>✔ Accepter</span>
-                        </button>
+                        <button type="submit" class="accept-button" name="action" value="accept">✔️ Accepter</button>
                     </form>
                 </c:forEach>
             </td>
@@ -205,6 +197,7 @@
     </c:forEach>
     </tbody>
 </table>
+
 
 </body>
 </html>

@@ -11,11 +11,11 @@ public class ApplicationJobOffer {
     private boolean status;
 
     @ManyToOne
-    @JoinColumn(name = "application_id")
+    @JoinColumn(name = "application_id", referencedColumnName = "id")
     private Application application;
 
     @ManyToOne
-    @JoinColumn(name = "job_offer_id")
+    @JoinColumn(name = "job_offer_id", referencedColumnName = "id")
     private JobOffer jobOffer;
 
 

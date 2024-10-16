@@ -51,15 +51,11 @@ Tests ensure proper functioning in both nominal (success) and edge cases (errors
 - **JUnit 5** for unit test execution.
 - **Mockito** for mocking dependencies in tests.
 - **Maven** for managing test dependencies and automating test execution.
-
-
-
->>>>>>> 9841ca2a1b443322e8e2b2c76da286a40ab19aac
 ## 📜 License
 This project is licensed under the MIT License.
 
 ## 📈 Presentation
-<<<<<<< HEAD
+
 [Project Presentation](https://www.canva.com/design/DAGSP4Ce82w/_UKGB7K__KWdkqt-t04pGA/edit)
 
 ## 🗂️ Project Planning
@@ -69,7 +65,7 @@ This project is licensed under the MIT License.
 
 ## 🗂️ Project Planning
 [View Project Planning](https://douaa123.atlassian.net/jira/software/c/projects/ET/boards/12/backlog)
->>>>>>> 9841ca2a1b443322e8e2b2c76da286a40ab19aac
+
 
 ---
 

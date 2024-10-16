@@ -6,6 +6,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.employeemanagement.entities.Employee;
+import org.employeemanagement.repository.EmployeeRepositoryImpl;
+import org.employeemanagement.repository.interfaces.EmployeeRepository;
 import org.employeemanagement.service.interfaces.EmployeeService;
 import org.employeemanagement.service.EmployeeServiceImpl;
 import java.io.IOException;
@@ -16,8 +18,8 @@ import java.util.List;
 
 @WebServlet("/employee")
 public class EmployeeServlet extends HttpServlet {
-
-    private EmployeeService employeeService = new EmployeeServiceImpl();
+private EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
+    private EmployeeService employeeService = new EmployeeServiceImpl(employeeRepository);
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -145,7 +147,7 @@ public class EmployeeServlet extends HttpServlet {
             String address = request.getParameter("address");
             String phoneNumber = request.getParameter("phoneNumber");
             double salary = Double.parseDouble(request.getParameter("salary"));
-            String soldConge = request.getParameter("soldConge");
+            double soldConge = Double.parseDouble(request.getParameter("soldConge"));
             String socialSecurityNumber = request.getParameter("socialSecurityNumber");
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

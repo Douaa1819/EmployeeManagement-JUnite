@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -41,7 +42,7 @@
         </div>
 
         <div class="card" style="background-color: #FF9800;">
-            <a href="/Employee-Management/error-page.jsp">
+            <a href="/Employee-Management/leaveRequest">
                 <span class="icon"><i class="fas fa-sun"></i></span>
                 <h2>Gestion des Conges</h2>
             </a>

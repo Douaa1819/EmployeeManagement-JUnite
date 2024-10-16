@@ -20,16 +20,13 @@ public class JobOffer {
     @ManyToOne
     @JoinColumn(name = "recruiter_id")
     private Recruiter recruiter;
-    @OneToMany(mappedBy = "jobOffer")
-    private List<ApplicationJobOffer> applications = new ArrayList<>();
+    @ManyToMany(mappedBy = "jobOffers")
+    private List<Application> applications;
 
-    public List<ApplicationJobOffer> getApplications() {
+    public List<Application> getApplications() {
         return applications;
     }
 
-    public void setApplications(List<ApplicationJobOffer> applications) {
-        this.applications = applications;
-    }
     public JobOffer() {
 
 }
