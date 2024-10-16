@@ -15,14 +15,21 @@ public class Application extends User {
     private String document;
     private String skills;
 
-    @OneToMany(mappedBy = "application")
-    private List<ApplicationJobOffer> jobOffers = new ArrayList<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "application_job_offer",
+            joinColumns = @JoinColumn(name = "application_id"),
+            inverseJoinColumns = @JoinColumn(name = "job_offer_id")
+    )
+    private List<JobOffer> jobOffers;
 
-    public List<ApplicationJobOffer> getJobOffers() {
+
+
+    public List<JobOffer> getJobOffers() {
         return jobOffers;
     }
 
-    public void setJobOffers(List<ApplicationJobOffer> jobOffers) {
+    public void setJobOffers(List<JobOffer> jobOffers) {
         this.jobOffers = jobOffers;
     }
     public Application( ) {

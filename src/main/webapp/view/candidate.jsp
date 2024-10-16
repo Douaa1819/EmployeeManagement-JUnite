@@ -184,29 +184,20 @@
         <tr>
             <td>${application.name}</td>
             <td>${application.email}</td>
-            <td>
-                <c:forEach var="jobOffer" items="${application.jobOffers}">
-                    <div>
-                            ${jobOffer.jobOffer.title} - ${jobOffer.isStatus() ? 'Actif' : 'Inactif'}
-                    </div>
-                </c:forEach>
-            </td>
-            <td>
+                       <td>
                 <c:forEach var="jobOffer" items="${application.jobOffers}">
                     <form action="candidate" method="post" style="display:inline;">
                         <input type="hidden" name="jobOfferId" value="${jobOffer.id}">
                         <input type="hidden" name="applicationId" value="${application.id}">
-                        <button type="submit" class="${jobOffer.isStatus() ? 'accept-button' : 'refuse-button'}" name="action" value="${jobOffer.isStatus() ? 'refuse' : 'accept'}">
-                            <span>${jobOffer.isStatus() ? '✘ Refuser' : '✔ Accepter'}</span>
-                        </button>
+                        <button type="submit" class="accept-button" name="action" value="accept">✔️ Accepter</button>
                     </form>
                 </c:forEach>
-
             </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
+
 
 </body>
 </html>

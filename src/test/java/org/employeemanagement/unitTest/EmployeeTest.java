@@ -46,7 +46,7 @@ public class EmployeeTest {
         employee.setAddress("123 Main St");
         employee.setPhoneNumber("1234567890");
         employee.setSalary(50000.00);
-        employee.setSoldConge("10");
+        employee.setSoldConge(10);
         employee.setSocialSecurityNumber("123-45-6789");
 
         when(employeeRepository.save(any(Employee.class))).thenReturn(employee);
@@ -72,7 +72,7 @@ public class EmployeeTest {
         existingEmployee.setAddress("123 Main St");
         existingEmployee.setPhoneNumber("1234567890");
         existingEmployee.setSalary(50000.00);
-        existingEmployee.setSoldConge("10");
+        existingEmployee.setSoldConge(10);
         existingEmployee.setSocialSecurityNumber("123-45-6789");
 
         Employee updatedEmployee = new Employee();
@@ -86,7 +86,7 @@ public class EmployeeTest {
         updatedEmployee.setAddress("456 Another St");
         updatedEmployee.setPhoneNumber("0987654321");
         updatedEmployee.setSalary(60000.00);
-        updatedEmployee.setSoldConge("15");
+        updatedEmployee.setSoldConge(15);
         updatedEmployee.setSocialSecurityNumber("987-65-4321");
 
 

@@ -15,7 +15,7 @@ public class EmployeeServiceImpl implements EmployeeService {
   private EmployeeRepository employeeRepository;
 
 
-    public EmployeeServiceImpl() {
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = new EmployeeRepositoryImpl();
     }
     @Override
@@ -99,8 +99,8 @@ public class EmployeeServiceImpl implements EmployeeService {
             throw new InvalidInputException("Employee salary must be greater than zero.");
         }
 
-        if (employee.getSoldConge() == null || employee.getSoldConge().isEmpty()) {
-            throw new InvalidInputException("Employee soldConge cannot be empty.");
+        if (employee.getSoldConge() <= 0) {
+            throw new InvalidInputException("Employee soldConge cannot than zero.");
         }
 
         if (employee.getSocialSecurityNumber() == null || employee.getSocialSecurityNumber().isEmpty()) {

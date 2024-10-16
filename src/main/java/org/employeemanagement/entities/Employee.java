@@ -1,9 +1,12 @@
 package org.employeemanagement.entities;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -14,7 +17,9 @@ public class Employee extends User {
     private String address;
     private String phoneNumber;
     private double salary;
-    private String soldConge;
+    private double soldConge;
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+    private List<LeaveRequest> leaveRequests;
     private String socialSecurityNumber;
     @ManyToOne
     private Admin admin;
@@ -25,7 +30,7 @@ public class Employee extends User {
         super();
     }
 
-    public Employee(String name, String email, String password , Date birthDate, String department, String position, String address, String phoneNumber, double salary, String soldConge , String socialSecurityNumber) {
+    public Employee(String name, String email, String password , Date birthDate, String department, String position, String address, String phoneNumber, double salary, double soldConge , String socialSecurityNumber) {
         super(name, email, password, birthDate);
         this.department = department;
         this.position = position;
@@ -79,11 +84,11 @@ public class Employee extends User {
         this.salary = salary;
     }
 
-    public String getSoldConge() {
+    public double getSoldConge() {
         return soldConge;
     }
 
-    public void setSoldConge(String soldConge) {
+    public void setSoldConge(double soldConge) {
         this.soldConge = soldConge;
     }
 
