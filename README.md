@@ -57,13 +57,11 @@ This project is licensed under the MIT License.
 
 [Project Presentation](https://www.canva.com/design/DAGSP4Ce82w/_UKGB7K__KWdkqt-t04pGA/edit)
 
-## 🗂️ Project Planning
 
-[Project Presentation](https://www.canva.com/design/DAGTirFDPLg/QlXqjvnjE-8RzIQmWH2oCg/edit)
 
 ## 🗂️ Project Planning
 [View Project Planning](https://douaa123.atlassian.net/jira/software/c/projects/ET/boards/12/backlog)
 
 
----
+
 
