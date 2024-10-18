@@ -26,7 +26,6 @@ This **Employee Management System** aims to enhance HR processes for a growing c
 ## 📊 Class Diagram
 [View Class Diagram](https://lucid.app/lucidchart/f53bccdc-e194-4cf1-9a8f-1827929e486e/edit?view_items=MYSfFlOmoGkX&invitationId=inv_7adfdd25-9c07-4819-a4b5-6866750f1ad6)
 
-=======
 # 👨‍💼 Employee Management System JUnite
 
 ## 🧪 Unit Tests
@@ -59,8 +58,7 @@ This project is licensed under the MIT License.
 [Project Presentation](https://www.canva.com/design/DAGSP4Ce82w/_UKGB7K__KWdkqt-t04pGA/edit)
 
 ## 🗂️ Project Planning
-[View Project Planning](https://douaa123.atlassian.net/jira/software/c/projects/EMV/boards/10/backlog?epics=visible)
-=======
+
 [Project Presentation](https://www.canva.com/design/DAGTirFDPLg/QlXqjvnjE-8RzIQmWH2oCg/edit)
 
 ## 🗂️ Project Planning
