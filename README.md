@@ -36,7 +36,6 @@ The project includes unit tests for core functionalities to ensure the system wo
    - Create, Read, Update, and Delete operations for managing employee records.
 2. **Job Offers**:
    - Create, publish, and delete job offers.
-   - Validate job offer details before publication.
 3. **Leave Management**:
    - Apply for leave, approve, or reject leave requests.
    - Test cases include date validation and leave balance verification.
